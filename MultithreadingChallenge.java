@@ -32,6 +32,7 @@ class MultithreadingChallenge {
         }
 
         void opA() throws InterruptedException {
+            //I have used a synchronized block to ensure that the locks are always acquired in the same order
             synchronized(b) {
                 try {
                     a.lock();
@@ -46,6 +47,7 @@ class MultithreadingChallenge {
         }
 
         void opB() throws InterruptedException {
+            //I have used a synchronized block to ensure that the locks are always acquired in the same order
             synchronized(b) {
                 try {
                     b.lock();
